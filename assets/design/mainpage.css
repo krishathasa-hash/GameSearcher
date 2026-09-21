@@ -1,0 +1,58 @@
+body {
+    background-color: #0d2b40;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0d2b40;
+}
+
+.nav-link {
+    font-family: "Geist Pixel", sans-serif;
+}
+
+.logo {
+    margin-top: 10px;
+    margin-left: 60px;
+}
+
+.nav-link-about {
+    font-family: "Geist Pixel", sans-serif;
+    color: #d7d7d7;
+    margin-right: 60px;
+    text-decoration: none;
+    position: relative;
+    top: 5px;
+}
+
+.custom-line {
+    border: none;
+    height: 3px;
+    background-color: rgb(46, 84, 116);
+    margin: 10px 0;
+    width: 100%;
+}
+
+.game-footer {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.back-to-top {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d7d7d7;
+    background-color: rgb(46, 84, 116);
+    border-color: rgb(46, 84, 116);
+}
+
+.back-to-top:hover {
+    background-color: #123b55;
+    border-color: #123b55;
+    color: #ffffff;
+}
