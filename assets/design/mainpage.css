@@ -1,4 +1,6 @@
 body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #0d2b40;
 }
 
@@ -35,24 +37,109 @@ body {
     width: 100%;
 }
 
-.game-footer {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+* {
+    box-sizing: border-box;
 }
 
-.back-to-top {
-    width: 44px;
-    height: 44px;
+/* ===== Floating centered search bar ===== */
+.searchBar {
+    position: sticky;                 /* stays visible while scrolling */
+    top: 20px;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #d7d7d7;
-    background-color: rgb(46, 84, 116);
-    border-color: rgb(46, 84, 116);
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    padding: 6px 6px 6px 20px;
+    background-color: #123b55;        /* matches your theme */
+    border: 1px solid rgb(46, 84, 116);
+    border-radius: 50px;              /* curved pill shape */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
-.back-to-top:hover {
+.searchBar:hover {
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.5);
+    transform: translateY(-1px);
+}
+
+.searchBar input[type=text] {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #d7d7d7;
+    font-family: "Geist Pixel", sans-serif;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.searchBar input[type=text]::placeholder {
+    color: #7a9cb3;
+    font-family: "Geist Pixel", sans-serif;
+}
+
+.searchBar .search-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.searchBar .search-container button {
+    border: none;
+    background-color: rgb(46, 84, 116);
+    color: #d7d7d7;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.searchBar .search-container button i {
+    font-size: 16px;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.searchBar .search-container button:hover {
     background-color: #123b55;
-    border-color: #123b55;
     color: #ffffff;
 }
+
+/* ===== Responsive (fix the broken 100px breakpoint) ===== */
+@media screen and (max-width: 600px) {
+    .searchBar {
+        width: 94%;
+        top: 10px;
+        padding-left: 15px;
+    }
+
+    .searchBar input[type=text] {
+        font-size: 14px;
+    }
+}
+
+    .game-footer {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .back-to-top {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #d7d7d7;
+        background-color: rgb(46, 84, 116);
+        border-color: rgb(46, 84, 116);
+    }
+
+    .back-to-top:hover {
+        background-color: #123b55;
+        border-color: #123b55;
+        color: #ffffff;
+    }
