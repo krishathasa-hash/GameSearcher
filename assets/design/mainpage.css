@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Geist Pixel", Arial, Helvetica, sans-serif; 
     background-color: #0d2b40;
 }
 
@@ -43,7 +43,8 @@ body {
 
 /* ===== Floating centered search bar ===== */
 .searchBar {
-    position: sticky;                 /* stays visible while scrolling */
+    position: sticky;
+    /* stays visible while scrolling */
     top: 20px;
     z-index: 1000;
     display: flex;
@@ -53,9 +54,11 @@ body {
     width: 90%;
     max-width: 600px;
     padding: 6px 6px 6px 20px;
-    background-color: #123b55;        /* matches your theme */
+    background-color: #123b55;
+    /* matches your theme */
     border: 1px solid rgb(46, 84, 116);
-    border-radius: 50px;              /* curved pill shape */
+    border-radius: 50px;
+    /* curved pill shape */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
     transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
@@ -109,6 +112,44 @@ body {
     color: #ffffff;
 }
 
+/* Reverse carousel slide direction */
+.carousel-item-next:not(.carousel-item-start),
+.active.carousel-item-end {
+  transform: translateX(-100%);
+}
+
+.carousel-item-prev:not(.carousel-item-end),
+.active.carousel-item-start {
+  transform: translateX(100%);
+}
+
+.title1 {
+    color: #d7d7d7;
+    padding: 10px 18px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title2 {
+    color: #d7d7d7;
+    padding: 10px 18px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title3 {
+    color: #d7d7d7;
+    padding: 10px 18px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* ===== Responsive (fix the broken 100px breakpoint) ===== */
 @media screen and (max-width: 600px) {
     .searchBar {
@@ -117,29 +158,79 @@ body {
         padding-left: 15px;
     }
 
-    .searchBar input[type=text] {
+    .searchBar input[type="text"] {
         font-size: 14px;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .card {
+        width: min(300px, 85%);
+    }
+
+    .logo {
+        margin-left: 20px;
+    }
+
+    .nav-link-about {
+        margin-right: 20px;
     }
 }
 
-    .game-footer {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-    }
+.game-footer {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: #d7d7d7;
+}
 
-    .back-to-top {
-        width: 44px;
-        height: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #d7d7d7;
-        background-color: rgb(46, 84, 116);
-        border-color: rgb(46, 84, 116);
-    }
+.back-to-top {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d7d7d7;
+    background-color: rgb(46, 84, 116);
+    border-color: rgb(46, 84, 116);
+}
 
-    .back-to-top:hover {
-        background-color: #123b55;
-        border-color: #123b55;
-        color: #ffffff;
-    }
+.back-to-top:hover {
+    background-color: #123b55;
+    border-color: #123b55;
+    color: #ffffff;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.card {
+    width: 300px;
+    height: 350px;
+    margin: 20px auto;
+    overflow: hidden;
+    background-color: #d7d7d7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-container {
+    padding: 10px 16px;
+}
+
+.carousel {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
